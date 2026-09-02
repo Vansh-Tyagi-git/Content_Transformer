@@ -6,7 +6,7 @@ from google import genai
 # Windows: set GEMINI_API_KEY="your_api_key_here"
 # Or for a quick test, you can paste it directly below:
 
-API_KEY = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6Jgk7wo4DYOZ-Vd9BAg_47pVvFVrGEkYoRgMNaG2IpLzQ")
+API_KEY = os.environ.get("GEMINI_API_KEY", "AIzaSyC13_6pQsYS84zdjAjZYROSQhMs-YCH4I4")
 
 # Initialize the client
 client = genai.Client(api_key=API_KEY)
