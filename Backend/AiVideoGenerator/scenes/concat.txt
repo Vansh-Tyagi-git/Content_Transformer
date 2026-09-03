@@ -1,0 +1,5 @@
+file 'C:/Users/Arpita Patel/Downloads/AI_Video_Generator/scenes/scene_1_story.mp4'
+file 'C:/Users/Arpita Patel/Downloads/AI_Video_Generator/scenes/scene_2_story.mp4'
+file 'C:/Users/Arpita Patel/Downloads/AI_Video_Generator/scenes/scene_3_story.mp4'
+file 'C:/Users/Arpita Patel/Downloads/AI_Video_Generator/scenes/scene_4_story.mp4'
+file 'C:/Users/Arpita Patel/Downloads/AI_Video_Generator/scenes/scene_5_story.mp4'

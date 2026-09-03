@@ -1,0 +1,40 @@
+{
+  "title": "Artificial Intelligence in Modern Business",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "scene_title": "AI is Transforming Business",
+      "duration": 8,
+      "narration": "Artificial Intelligence is transforming modern businesses.",
+      "on_screen_text": "ARTIFICIAL INTELLIGENCE\nIN MODERN BUSINESS"
+    },
+    {
+      "scene_number": 2,
+      "scene_title": "Automation, Analysis, and Decisions",
+      "duration": 12,
+      "narration": "It helps organizations automate repetitive tasks, analyze large amounts of data, and improve decision-making.",
+      "on_screen_text": "AUTOMATE TASKS\nANALYZE DATA\nIMPROVE DECISIONS"
+    },
+    {
+      "scene_number": 3,
+      "scene_title": "Diverse Sector Uses",
+      "duration": 12,
+      "narration": "AI can be used in customer service, finance, marketing, cybersecurity, healthcare, and many other areas.",
+      "on_screen_text": "CUSTOMER SERVICE\nFINANCE\nMARKETING\nCYBERSECURITY\nHEALTHCARE"
+    },
+    {
+      "scene_number": 4,
+      "scene_title": "Business Benefits",
+      "duration": 10,
+      "narration": "Businesses can use AI to improve efficiency, reduce manual work, and provide better experiences to customers.",
+      "on_screen_text": "IMPROVE EFFICIENCY\nREDUCE MANUAL WORK\nBETTER CUSTOMER EXPERIENCES"
+    },
+    {
+      "scene_number": 5,
+      "scene_title": "Responsible Use of AI",
+      "duration": 10,
+      "narration": "However, organizations should also focus on data privacy, security, accuracy, and the responsible use of AI.",
+      "on_screen_text": "DATA PRIVACY\nSECURITY\nACCURACY\nRESPONSIBLE AI"
+    }
+  ]
+}
