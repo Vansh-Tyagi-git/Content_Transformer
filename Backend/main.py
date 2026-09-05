@@ -7,6 +7,7 @@ import uuid
 from HuggingFace.content_generator import generate_content
 from HuggingFace.ppt.ppt_generator import generate_ppt_plan
 from HuggingFace.ppt.ppt_renderer import render_ppt
+from HuggingFace.InfoGraph import generate_infographic
 
 
 app = FastAPI(
@@ -77,17 +78,40 @@ def confirm():
 # --------------------------------------------------
 # TRANSFORM
 # --------------------------------------------------
-
 @app.post("/api/transform")
 def transform(request: TransformRequest):
 
     # --------------------------------------------------
+    # INFOGRAPHIC
+    # --------------------------------------------------
+    if request.outputType == "Infographic":
+        try:
+            infographic = generate_infographic(
+                source_content=request.sourceText,
+                target_audience=request.audience,
+                tone=request.tone,
+                language="English",
+                detail_level="Medium",
+                communication_objective="Awareness"
+            )
+
+            return {
+                "success": True,
+                "outputType": "Infographic",
+                "content": infographic
+            }
+
+        except Exception as exc:
+            return {
+                "success": False,
+                "error": str(exc)
+            }
+
+    # --------------------------------------------------
     # PPT
     # --------------------------------------------------
+    if request.outputType in ["PowerPoint", "Presentation"]:
 
-    if request.outputType == "PowerPoint":
-
-        # Generate PPT presentation plan
         result = generate_ppt_plan(
             source_content=request.sourceText,
             target_audience=request.audience,
@@ -98,7 +122,6 @@ def transform(request: TransformRequest):
             content_style="Clear and Structured"
         )
 
-        # Check generation result
         if not result.get("success"):
             return {
                 "success": False,
@@ -119,16 +142,13 @@ def transform(request: TransformRequest):
         # --------------------------------------------------
         # RENDER PPTX
         # --------------------------------------------------
-
         output_dir = Path("generated_ppt")
-
         output_dir.mkdir(
             parents=True,
             exist_ok=True
         )
 
         filename = f"presentation_{uuid.uuid4().hex}.pptx"
-
         output_path = output_dir / filename
 
         render_ppt(
@@ -143,11 +163,9 @@ def transform(request: TransformRequest):
             "file": str(output_path)
         }
 
-
     # --------------------------------------------------
     # OTHER CONTENT TYPES
     # --------------------------------------------------
-
     output_type_map = {
         "Summary": "executive_summary",
         "Advisory": "advisory",
@@ -159,7 +177,6 @@ def transform(request: TransformRequest):
         request.outputType
     )
 
-    # Check whether this is currently supported
     if not generator_output_type:
         return {
             "success": False,
@@ -169,7 +186,9 @@ def transform(request: TransformRequest):
             )
         }
 
-    # Call existing content generator
+    # --------------------------------------------------
+    # CALL CONTENT GENERATOR
+    # --------------------------------------------------
     result = generate_content(
         source_content=request.sourceText,
         output_types=[generator_output_type],
