@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f8fafc; color: #0f172a; }
+    .package { border: 1px solid #cbd5e1; padding: 20px; border-radius: 8px; background: #fff; }
+    .scene { background: #f1f5f9; padding: 12px; border-radius: 6px; margin-top: 10px; font-size: 13px; }
+    .label { font-weight: bold; color: #2563eb; }
+  </style>
+</head>
+<body>
+  <div class="package">
+    <h1>Video Script Package: <%= title %></h1>
+    <p><strong>Target Audience:</strong> <%= audience %></p>
+    
+    <div class="scene">
+      <div class="label">Scene 1 (Hook):</div>
+      <p><em>Visual:</em> High-level infographic overlay with dynamic text animation.</p>
+      <p><em>Narration:</em> "<%= summary %>"</p>
+    </div>
+
+    <div class="scene">
+      <div class="label">Scene 2 (Core Insights):</div>
+      <p><em>Visual:</em> Motion graphics highlighting key data points.</p>
+      <p><em>Narration:</em> "Here are the top operational priorities: <%= keyPoints.join(', ') %>"</p>
+    </div>
+  </div>
+</body>
+</html>

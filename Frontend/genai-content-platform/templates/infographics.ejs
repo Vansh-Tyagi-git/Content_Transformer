@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #0284c7; color: white; }
+    .box { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 12px; backdrop-filter: blur(10px); }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+    .stat-card { background: white; color: #0f172a; padding: 12px; border-radius: 8px; font-weight: bold; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>INFOGRAPHIC BRIEF</h1>
+    <h2><%= title %></h2>
+    <p><%= summary %></p>
+    <div class="stat-grid">
+      <% keyPoints.forEach(function(point, i) { %>
+        <div class="stat-card">KEY POINT 0<%= i+1 %>: <%= point %></div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #0f172a; color: white; }
+    .slide { background: #1e293b; padding: 24px; border-radius: 8px; border-left: 6px solid #06b6d4; margin-bottom: 16px; }
+    h2 { margin-top: 0; color: #38bdf8; }
+    .notes { background: #0f172a; padding: 12px; border-radius: 4px; font-size: 12px; color: #94a3b8; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h2>Slide 1: <%= title %></h2>
+    <p><strong>Overview:</strong> <%= summary %></p>
+    <div class="notes"><strong>Speaker Notes:</strong> Emphasize strategic outcomes for <%= audience %>.</div>
+  </div>
+  <div class="slide">
+    <h2>Slide 2: Key Takeaways</h2>
+    <ul>
+      <% keyPoints.forEach(function(point) { %>
+        <li><%= point %></li>
+      <% }); %>
+    </ul>
+    <div class="notes"><strong>Speaker Notes:</strong> Walk through each item systematically.</div>
+  </div>
+</body>
+</html>

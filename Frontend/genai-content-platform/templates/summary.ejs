@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Georgia, serif; padding: 30px; background: #ffffff; color: #111827; }
+    .header { border-bottom: 2px solid #111827; padding-bottom: 12px; margin-bottom: 20px; }
+    h1 { font-size: 22px; margin: 0; }
+    .meta { font-style: italic; color: #4b5563; font-size: 13px; margin-top: 4px; }
+    .content { font-size: 15px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Executive Briefing: <%= title %></h1>
+    <div class="meta">Prepared for: <%= audience %> | Tone: <%= tone %></div>
+  </div>
+  <div class="content">
+    <p><strong>Executive Summary:</strong> <%= summary %></p>
+    <p><strong>Strategic Takeaways:</strong></p>
+    <ul>
+      <% keyPoints.forEach(function(point) { %>
+        <li><%= point %></li>
+      <% }); %>
+    </ul>
+  </div>
+</body>
+</html>
