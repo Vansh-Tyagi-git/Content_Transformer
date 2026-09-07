@@ -28,6 +28,7 @@ app.add_middleware(
 
         # Your Vercel frontend
         "https://content-transformer-krda1geqn-vanshs-projects-367523d4.vercel.app",
+        "https://content-transformer-steel.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
