@@ -1,40 +1,192 @@
 {
-  "title": "Artificial Intelligence in Modern Business",
+  "title": "AI-Enabled Cybersecurity Operations",
+  "summary": "An overview of leveraging AI platforms to streamline security alert processing, risk prioritization, automated response, and governance.",
   "scenes": [
     {
       "scene_number": 1,
-      "scene_title": "AI is Transforming Business",
-      "duration": 8,
-      "narration": "Artificial Intelligence is transforming modern businesses.",
-      "on_screen_text": "ARTIFICIAL INTELLIGENCE\nIN MODERN BUSINESS"
+      "scene_title": "The Security Challenge",
+      "duration": 7.0,
+      "narration": "Modern organisations face overwhelming security alerts across endpoints, cloud systems, and networks, creating critical delays and analyst workload overload.",
+      "visual_concept": "Presenter standing beside a digital display showing incoming alert streams from cloud, network, and endpoint nodes.",
+      "visual_type": "intro",
+      "visual_style": "cinematic_cards",
+      "visual_elements": [
+        "presenter",
+        "cloud icon",
+        "network node",
+        "alert card",
+        "endpoint server"
+      ],
+      "layout": "left_visual_right_text",
+      "background_theme": "security",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Modern Security Challenges",
+      "character": true
     },
     {
       "scene_number": 2,
-      "scene_title": "Automation, Analysis, and Decisions",
-      "duration": 12,
-      "narration": "It helps organizations automate repetitive tasks, analyze large amounts of data, and improve decision-making.",
-      "on_screen_text": "AUTOMATE TASKS\nANALYZE DATA\nIMPROVE DECISIONS"
+      "scene_title": "AI-Based Detection",
+      "duration": 7.0,
+      "narration": "An AI-enabled platform continuously analyzes event streams, filtering noise and grouping related alerts into meaningful incidents.",
+      "visual_concept": "An AI core processing multi-source data streams, reducing visual noise and clustering correlated alerts into incident cards.",
+      "visual_type": "technology",
+      "visual_style": "diagrammatic",
+      "visual_elements": [
+        "AI node",
+        "filtered event stream",
+        "grouped incident card",
+        "noise filter badge"
+      ],
+      "layout": "center_diagram",
+      "background_theme": "technology",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "AI Event Analysis",
+      "character": false
     },
     {
       "scene_number": 3,
-      "scene_title": "Diverse Sector Uses",
-      "duration": 12,
-      "narration": "AI can be used in customer service, finance, marketing, cybersecurity, healthcare, and many other areas.",
-      "on_screen_text": "CUSTOMER SERVICE\nFINANCE\nMARKETING\nCYBERSECURITY\nHEALTHCARE"
+      "scene_title": "Risk Prioritisation",
+      "duration": 7.0,
+      "narration": "Incidents are prioritized using risk scores calculated from asset criticality, alert severity, and anomalous behavioral patterns.",
+      "visual_concept": "A risk scoring dashboard weighing key factors to elevate high-priority incidents for immediate investigation.",
+      "visual_type": "dashboard",
+      "visual_style": "data_story",
+      "visual_elements": [
+        "risk score badge",
+        "asset criticality indicator",
+        "alert severity bar",
+        "priority queue"
+      ],
+      "layout": "dashboard",
+      "background_theme": "security",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Intelligent Risk Scoring",
+      "character": false
     },
     {
       "scene_number": 4,
-      "scene_title": "Business Benefits",
-      "duration": 10,
-      "narration": "Businesses can use AI to improve efficiency, reduce manual work, and provide better experiences to customers.",
-      "on_screen_text": "IMPROVE EFFICIENCY\nREDUCE MANUAL WORK\nBETTER CUSTOMER EXPERIENCES"
+      "scene_title": "Automated Response",
+      "duration": 7.0,
+      "narration": "Automated playbooks isolate affected endpoints and block connections, while maintaining mandatory human approval for sensitive actions.",
+      "visual_concept": "Flow diagram showing automated response playbooks executing containment actions with a human checkpoint.",
+      "visual_type": "workflow",
+      "visual_style": "technical",
+      "visual_elements": [
+        "playbook card",
+        "isolated endpoint",
+        "blocked connection badge",
+        "human approval key"
+      ],
+      "layout": "right_visual_left_text",
+      "background_theme": "security",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Automated Incident Response",
+      "character": false
     },
     {
       "scene_number": 5,
-      "scene_title": "Responsible Use of AI",
-      "duration": 10,
-      "narration": "However, organizations should also focus on data privacy, security, accuracy, and the responsible use of AI.",
-      "on_screen_text": "DATA PRIVACY\nSECURITY\nACCURACY\nRESPONSIBLE AI"
+      "scene_title": "Key Target Metrics",
+      "duration": 8.0,
+      "narration": "Target metrics aim to reduce detection time from forty-five to fifteen minutes, and response time from ninety to thirty minutes.",
+      "visual_concept": "A comparative metric chart illustrating target reductions in mean time to detect and mean time to respond.",
+      "visual_type": "chart",
+      "visual_style": "infographic",
+      "visual_elements": [
+        "MTTD metric card",
+        "MTTR metric card",
+        "timer icon",
+        "comparison bar"
+      ],
+      "layout": "split_comparison",
+      "background_theme": "business",
+      "background_mode": "light",
+      "show_chart": true,
+      "chart_type": "bar",
+      "on_screen_text": "Target Response Metrics",
+      "character": false
+    },
+    {
+      "scene_number": 6,
+      "scene_title": "Governance & Security",
+      "duration": 7.0,
+      "narration": "Governance requires logged decisions, role-based access, data protection, and continuous review of model outputs for false positives.",
+      "visual_concept": "A central governance shield surrounded by activity audit logs, role-based access keys, and model review indicators.",
+      "visual_type": "security",
+      "visual_style": "executive",
+      "visual_elements": [
+        "secure shield",
+        "audit log document",
+        "role permissions badge",
+        "validation checklist"
+      ],
+      "layout": "left_visual_right_text",
+      "background_theme": "security",
+      "background_mode": "dark",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Governance and Compliance",
+      "character": false
+    },
+    {
+      "scene_number": 7,
+      "scene_title": "Implementation Roadmap",
+      "duration": 8.0,
+      "narration": "Implementation proceeds in four stages: connect data sources, establish detection rules, introduce AI prioritisation, and activate response playbooks.",
+      "visual_concept": "A progressive four-stage roadmap layout spanning data connection, rule definition, AI scoring, and playbook execution.",
+      "visual_type": "timeline",
+      "visual_style": "diagrammatic",
+      "visual_elements": [
+        "data connector card",
+        "detection rule card",
+        "AI prioritization node",
+        "playbook trigger card"
+      ],
+      "layout": "timeline",
+      "background_theme": "technology",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Four-Stage Implementation Roadmap",
+      "character": false
+    },
+    {
+      "scene_number": 8,
+      "scene_title": "Expected Benefits",
+      "duration": 9.0,
+      "narration": "This strategy improves visibility, shortens response cycles, reduces repetitive analyst work, and creates a consistent incident handling process.",
+      "visual_concept": "A balanced summary grid displaying core operational improvements across visibility, speed, productivity, and consistency.",
+      "visual_type": "conclusion",
+      "visual_style": "minimal",
+      "visual_elements": [
+        "visibility dashboard",
+        "time efficiency icon",
+        "analyst productivity card",
+        "standardized workflow badge"
+      ],
+      "layout": "grid_cards",
+      "background_theme": "neutral",
+      "background_mode": "light",
+      "show_chart": false,
+      "chart_type": "",
+      "on_screen_text": "Enhanced Security Operations",
+      "character": false
     }
-  ]
+  ],
+  "video_duration_seconds": 60,
+  "run_dir": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422",
+  "audio_dir": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422\\audio",
+  "scenes_dir": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422\\scenes",
+  "final_video": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422\\Cybersecurity_AI_Test_Sample_1min_20260908_225422.mp4",
+  "final_srt": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422\\Cybersecurity_AI_Test_Sample_1min_20260908_225422.srt",
+  "final_vtt": "C:\\Users\\Arpita Patel\\Downloads\\abcd\\Backend\\AiVideoGenerator\\outputs\\Cybersecurity_AI_Test_Sample_1min_20260908_225422\\Cybersecurity_AI_Test_Sample_1min_20260908_225422.vtt",
+  "voice": "en-US-AndrewNeural",
+  "source_pdf": "Cybersecurity_AI_Test_Sample.pdf"
 }
