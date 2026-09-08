@@ -1,0 +1,7 @@
+google-genai
+edge-tts
+moviepy
+pymupdf
+numpy
+Pillow
+opencv-python

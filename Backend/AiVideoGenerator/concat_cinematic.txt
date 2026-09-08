@@ -1,0 +1,6 @@
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_1_cinematic.mp4'
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_2_cinematic.mp4'
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_3_cinematic.mp4'
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_4_cinematic.mp4'
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_5_cinematic.mp4'
+file 'C:/Users/Arpita Patel/Downloads/abcd/Backend/AiVideoGenerator/scenes/scene_6_cinematic.mp4'
