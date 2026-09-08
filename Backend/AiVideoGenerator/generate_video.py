@@ -4007,115 +4007,115 @@ def combine_scenes(
 # DURATION SELECTION
 # ============================================================
 
-def get_target_duration():
-    """Always ask the user to choose the final video duration."""
+# def get_target_duration():
+#     """Always ask the user to choose the final video duration."""
 
-    print()
-    print("=" * 75)
-    print("SELECT VIDEO DURATION")
-    print("=" * 75)
-    print()
-    print("1 = 1 minute")
-    print("2 = 2 minutes")
-    print("3 = 3 minutes")
-    print()
+#     print()
+#     print("=" * 75)
+#     print("SELECT VIDEO DURATION")
+#     print("=" * 75)
+#     print()
+#     print("1 = 1 minute")
+#     print("2 = 2 minutes")
+#     print("3 = 3 minutes")
+#     print()
 
-    while True:
-        choice = input("Enter your choice (1/2/3): ").strip()
+#     while True:
+#         choice = input("Enter your choice (1/2/3): ").strip()
 
-        if choice == "1":
-            return 60.0
+#         if choice == "1":
+#             return 60.0
 
-        if choice == "2":
-            return 120.0
+#         if choice == "2":
+#             return 120.0
 
-        if choice == "3":
-            return 180.0
+#         if choice == "3":
+#             return 180.0
 
-        print("Please enter only 1, 2 or 3.")
+#         print("Please enter only 1, 2 or 3.")
 
-def adjust_scene_durations(
-    scenes,
-    target_duration
-):
+# def adjust_scene_durations(
+#     scenes,
+#     target_duration
+# ):
 
-    original_durations = []
+#     original_durations = []
 
-    for scene in scenes:
+#     for scene in scenes:
 
-        try:
+#         try:
 
-            duration = float(
-                scene.get(
-                    "duration",
-                    6
-                )
-            )
+#             duration = float(
+#                 scene.get(
+#                     "duration",
+#                     6
+#                 )
+#             )
 
-        except Exception:
+#         except Exception:
 
-            duration = 6.0
+#             duration = 6.0
 
-        original_durations.append(
-            max(
-                2.5,
-                duration
-            )
-        )
+#         original_durations.append(
+#             max(
+#                 2.5,
+#                 duration
+#             )
+#         )
 
-    original_total = sum(
-        original_durations
-    )
+#     original_total = sum(
+#         original_durations
+#     )
 
-    if original_total <= 0:
+#     if original_total <= 0:
 
-        original_total = (
-            len(scenes) * 6
-        )
+#         original_total = (
+#             len(scenes) * 6
+#         )
 
-    scale = (
-        target_duration
-        / original_total
-    )
+#     scale = (
+#         target_duration
+#         / original_total
+#     )
 
-    adjusted = [
-        d * scale
-        for d in original_durations
-    ]
+#     adjusted = [
+#         d * scale
+#         for d in original_durations
+#     ]
 
-    # Do not allow extremely short scenes.
-    adjusted = [
-        max(
-            2.5,
-            d
-        )
-        for d in adjusted
-    ]
+#     # Do not allow extremely short scenes.
+#     adjusted = [
+#         max(
+#             2.5,
+#             d
+#         )
+#         for d in adjusted
+#     ]
 
-    adjusted_total = sum(
-        adjusted
-    )
+#     adjusted_total = sum(
+#         adjusted
+#     )
 
-    if adjusted_total > 0:
+#     if adjusted_total > 0:
 
-        final_scale = (
-            target_duration
-            / adjusted_total
-        )
+#         final_scale = (
+#             target_duration
+#             / adjusted_total
+#         )
 
-        adjusted = [
-            d * final_scale
-            for d in adjusted
-        ]
+#         adjusted = [
+#             d * final_scale
+#             for d in adjusted
+#         ]
 
-    for scene, duration in zip(
-        scenes,
-        adjusted
-    ):
+#     for scene, duration in zip(
+#         scenes,
+#         adjusted
+#     ):
 
-        scene["duration"] = float(
-            duration
-        )
+#         scene["duration"] = float(
+#             duration
+#         )
 
 
 # ============================================================
@@ -4202,20 +4202,28 @@ def main():
     print("Narrator voice:", data.get("voice", "configured by main.py"))
     print("Output folder:", FINAL_VIDEO.parent)
 
+    target_duration = data.get(
+    "video_duration_seconds",
+    sum(
+        float(scene.get("duration", 6))
+        for scene in scenes
+    )
+)
+
     # --------------------------------------------------------
     # Duration
     # --------------------------------------------------------
 
-    target_duration = get_target_duration()
+    # target_duration = get_target_duration()
 
-    # --------------------------------------------------------
-    # Scale requested durations
-    # --------------------------------------------------------
+    # # --------------------------------------------------------
+    # # Scale requested durations
+    # # --------------------------------------------------------
 
-    adjust_scene_durations(
-        scenes,
-        target_duration
-    )
+    # adjust_scene_durations(
+    #     scenes,
+    #     target_duration
+    # )
 
     print()
     print("=" * 75)
