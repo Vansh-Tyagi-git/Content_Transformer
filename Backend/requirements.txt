@@ -5,3 +5,5 @@ huggingface_hub
 fastapi
 uvicorn
 pydantic
+PyMuPDF
+edge_tts
