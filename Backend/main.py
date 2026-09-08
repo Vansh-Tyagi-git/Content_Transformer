@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from pathlib import Path
 import uuid
 
+from AiVideoGenerator.main import generate_video
 from HuggingFace.content_generator import generate_content
 from HuggingFace.ppt.ppt_generator import generate_ppt_plan
 from HuggingFace.ppt.ppt_renderer import render_ppt
@@ -45,6 +46,7 @@ class TransformRequest(BaseModel):
     outputType: str
     tone: str = "Professional"
     audience: str = "Executive Leadership"
+    duration: int = 60   # seconds
 
 
 # --------------------------------------------------
@@ -111,6 +113,43 @@ def transform(request: TransformRequest):
                 "error": str(exc)
             }
 
+    # --------------------------------------------------
+    # VIDEO
+    # --------------------------------------------------
+    if request.outputType == "Video":
+        try:
+            result = generate_video(
+                source_content=request.sourceText,
+                target_audience=request.audience,
+                tone=request.tone,
+                duration=request.duration,
+                language="English",
+                detail_level="Medium",
+                communication_objective="Inform"
+            )
+
+            if not result.get("success"):
+                return {
+                    "success": False,
+                    "error": result.get(
+                        "error",
+                        "Video generation failed."
+                    )
+                }
+
+            return {
+                "success": True,
+                "outputType": "Video",
+                "content": result.get("content"),
+                "file": result.get("file")
+            }
+
+        except Exception as exc:
+            return {
+                "success": False,
+                "error": str(exc)
+            }
+    
     # --------------------------------------------------
     # PPT
     # --------------------------------------------------
