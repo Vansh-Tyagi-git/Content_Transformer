@@ -228,6 +228,7 @@ export default function App() {
       desc:
         "Slide structure, bullets & speaker notes"
     },
+    
 
     {
       id: "infographic",
