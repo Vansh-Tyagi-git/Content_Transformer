@@ -209,7 +209,12 @@ function InfographicCard({
         return result.content as InfographicData;
       }
 
-      return JSON.parse(result.content);
+      if (typeof result.content === "string") {
+        return JSON.parse(result.content) as InfographicData;
+      }
+
+      return result.content as InfographicData;
+
     } catch {
       return null;
     }
