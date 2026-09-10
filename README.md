@@ -182,6 +182,12 @@ More detailed documentation is available in:
 * `submission/DEMO.md` — Demo information.
 * `submission/PRESENTATION.md` — Project presentation.
 
+## 🌐 Live Deployment
+
+The application is deployed and available online:
+
+**[Content Transformer](https://content-transformer-steel.vercel.app/)**
+
 ## 📄 License
 
 See `LICENSE` for license information.
