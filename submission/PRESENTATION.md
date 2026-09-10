@@ -6,7 +6,7 @@ Upload the **final SIH presentation (PPT/PPTX)** in this `submission/` folder an
 
 Replace the placeholder below with the actual file name once uploaded:
 
-- **PPT:** `[Open Final Presentation](./YOUR_FINAL_PRESENTATION.pptx)`
+- **PPT:** `Prime Movers_SIH2026_Presentation.pptx`
 
 ### Requirements
 
@@ -17,4 +17,4 @@ Replace the placeholder below with the actual file name once uploaded:
 
 ## External presentation link (only if needed)
 
-`<PASTE_GOOGLE_DRIVE_OR_ONEDRIVE_VIEW_LINK_HERE>`
+`https://docs.google.com/presentation/d/1VIQkH8ojF-crSRn0n5I7pGDd2C7Qb5M-/edit?usp=drive_link&ouid=117703592656975947271&rtpof=true&sd=true`
